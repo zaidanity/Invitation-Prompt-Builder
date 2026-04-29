@@ -18,16 +18,13 @@
             color: #1a1e2b;
         }
 
-        /* smooth font */
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
 
-        /* container utama – lebih rapi dan lebar proporsional */
         .generator-container {
             max-width: 880px;
             margin: 0 auto;
         }
 
-        /* header minimalis */
         .studio-header {
             margin-bottom: 2.5rem;
             text-align: center;
@@ -62,25 +59,21 @@
             font-weight: 400;
         }
 
-        /* kartu – white card + bayangan halus */
         .form-card {
             background: #ffffff;
             border-radius: 28px;
             box-shadow: 0 8px 28px -6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
             padding: 1.8rem 2rem;
             margin-bottom: 1.8rem;
-            transition: all 0.2s ease;
             border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
-        /* grid untuk form agar lebih rapi di desktop */
         .form-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.25rem;
         }
 
-        /* full width di mobile */
         @media (max-width: 680px) {
             .form-grid {
                 grid-template-columns: 1fr;
@@ -130,7 +123,6 @@
             box-shadow: 0 0 0 3px rgba(136, 178, 172, 0.2);
         }
 
-        /* checkbox area – lebih clean */
         .checkbox-group {
             display: flex;
             flex-wrap: wrap;
@@ -164,7 +156,6 @@
             accent-color: #4f7e7a;
         }
 
-        /* sub-input grup (dinamis) */
         .sub-input-group {
             margin-top: 1.2rem;
             background: #fafcff;
@@ -204,7 +195,6 @@
             background: #edf2f7;
         }
 
-        /* tombol utama profesional */
         .btn-primary {
             background: #2f5b57;
             border: none;
@@ -242,7 +232,6 @@
             background: #e2e9ef;
         }
 
-        /* area hasil prompt – clean modern dark mode elegan */
         .result-panel {
             background: #1a2629;
             border-radius: 28px;
@@ -293,7 +282,6 @@
             margin-top: 1rem;
         }
 
-        /* utility */
         .full-width {
             grid-column: span 2;
         }
@@ -304,15 +292,16 @@
             }
         }
 
-        /* pesan error minimal */
-        .error-toast {
-            background: #fff5f0;
-            border-left: 3px solid #e6a17a;
-            padding: 0.8rem 1rem;
-            border-radius: 18px;
-            font-size: 0.85rem;
-            margin-top: 0.8rem;
-            color: #ad6b48;
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 1.5rem 1rem 0.5rem;
+            border-top: 1px solid #e9edf2;
+        }
+
+        footer p {
+            color: #8b9aab;
+            font-size: 0.7rem;
         }
     </style>
 </head>
@@ -327,42 +316,34 @@
     <div class="form-card">
         <form id="weddingForm">
             <div class="form-grid">
-                <!-- 1 -->
                 <div class="form-group">
                     <label>Nama pengantin pria</label>
                     <input type="text" id="namaPria" placeholder="contoh: Raditya Putra" required>
                 </div>
-                <!-- 2 -->
                 <div class="form-group">
                     <label>Nama pengantin wanita</label>
                     <input type="text" id="namaWanita" placeholder="contoh: Kirana Maharani" required>
                 </div>
-                <!-- 3 -->
                 <div class="form-group">
                     <label>Tanggal pernikahan</label>
                     <input type="date" id="tglNikah" required>
                 </div>
-                <!-- 4 -->
                 <div class="form-group">
                     <label>Waktu akad nikah</label>
                     <input type="text" id="waktuAkad" placeholder="08:00 - 09:30 WIB" required>
                 </div>
-                <!-- 5 -->
                 <div class="form-group">
                     <label>Waktu resepsi</label>
                     <input type="text" id="waktuResepsi" placeholder="10:00 - 15:00 WIB" required>
                 </div>
-                <!-- 6 -->
                 <div class="form-group">
                     <label>Lokasi akad nikah</label>
                     <input type="text" id="lokasiAkad" placeholder="Masjid / Kediaman" required>
                 </div>
-                <!-- 7 -->
                 <div class="form-group">
                     <label>Lokasi resepsi</label>
                     <input type="text" id="lokasiResepsi" placeholder="Gedung / Ballroom" required>
                 </div>
-                <!-- 8 -->
                 <div class="form-group">
                     <label>Tema warna website</label>
                     <select id="temaWarna">
@@ -375,7 +356,6 @@
                         <option value="Dusty Blue">Dusty Blue</option>
                     </select>
                 </div>
-                <!-- 9 -->
                 <div class="form-group">
                     <label>Gaya visual website</label>
                     <select id="gayaVisual">
@@ -385,14 +365,12 @@
                         <option>Monokrom hitam putih</option>
                     </select>
                 </div>
-                <!-- 10 cerita cinta (full width) -->
                 <div class="full-width">
                     <div class="form-group">
                         <label>Cerita cinta singkat</label>
                         <textarea id="ceritaCinta" rows="2" placeholder="Kisah bagaimana kami bertemu dan perjalanan cinta..." required></textarea>
                     </div>
                 </div>
-                <!-- 11 kata pembuka -->
                 <div class="full-width">
                     <div class="form-group">
                         <label>Kata pembuka kolom ucapan tamu</label>
@@ -401,18 +379,19 @@
                 </div>
             </div>
 
-            <!-- elemen checkbox (tanpa grid, full) -->
+            <!-- elemen checkbox -->
             <div class="form-group" style="margin-top: 0.75rem;">
                 <label>Elemen website yang ingin ditampilkan</label>
                 <div class="checkbox-group" id="elementsCheckbox">
-                    <label><input type="checkbox" value="Hero image pasangan" class="elemCheck" data-has-link="hero"> Hero image</label>
+                    <label><input type="checkbox" value="Hero image pasangan" class="elemCheck"> Hero image</label>
                     <label><input type="checkbox" value="Countdown timer" class="elemCheck"> Countdown timer</label>
                     <label><input type="checkbox" value="RSVP form" class="elemCheck"> RSVP form</label>
-                    <label><input type="checkbox" value="Galeri foto pasangan" class="elemCheck" data-has-link="galeri"> Galeri foto</label>
-                    <label><input type="checkbox" value="Background music" class="elemCheck" data-has-link="bgm"> Background music</label>
+                    <label><input type="checkbox" value="Galeri foto pasangan" class="elemCheck"> Galeri foto</label>
+                    <label><input type="checkbox" value="Background music" class="elemCheck"> Background music</label>
                     <label><input type="checkbox" value="Google Maps lokasi" class="elemCheck"> Google Maps</label>
-                    <label><input type="checkbox" value="Wedding gift" class="elemCheck" data-has-link="gift"> Wedding gift</label>
+                    <label><input type="checkbox" value="Wedding gift" class="elemCheck"> Wedding gift</label>
                     <label><input type="checkbox" value="Ucapan dari tamu" class="elemCheck"> Ucapan tamu</label>
+                    <label><input type="checkbox" value="Nama orang tua" class="elemCheck" data-parents="true"> Nama orang tua</label>
                 </div>
                 <div id="dynamicSubInputs" style="margin-top: 0.75rem;"></div>
                 <div class="inline-hint">* Untuk Google Drive: gunakan format https://lh3.googleusercontent.com/d/ID_FOTO*</div>
@@ -433,24 +412,24 @@
             <div class="prompt-code" id="promptOutput"></div>
         </div>
     </div>
+
+    <footer>
+        <p>© 2025 Wedding Prompt Studio By zaidanity — Undangan Digital Elegan</p>
+    </footer>
 </div>
-<!-- Footer simple clean -->
-<footer style="margin-top: 3rem; text-align: center; padding: 1.8rem 1rem 1rem; border-top: 1px solid #edf2f7;">
-    <p style="color: #8e9eae; font-size: 0.7rem; letter-spacing: 0.3px;">
-        © 2025 Wedding Prompt Studio By Zaidanity · Generator Undangan Pernikahan Digital
-    </p>
-    <p style="color: #b9c3ce; font-size: 0.65rem; margin-top: 0.4rem;">
-        Buat prompt profesional untuk frontend developer Anda ✨
-    </p>
-</footer>
 
 <script>
-    // DOM elements
     const dynamicContainer = document.getElementById('dynamicSubInputs');
     let extraHeroInput = null;
     let extraGaleriInputs = [];
     let extraBgmInput = null;
     let extraGiftInput = null;
+    let extraParents = {
+        ayahPria: null,
+        ibuPria: null,
+        ayahWanita: null,
+        ibuWanita: null
+    };
 
     function renderDynamicSubinputs() {
         dynamicContainer.innerHTML = '';
@@ -458,15 +437,24 @@
         extraGaleriInputs = [];
         extraBgmInput = null;
         extraGiftInput = null;
+        
+        // reset parents
+        extraParents = {
+            ayahPria: null,
+            ibuPria: null,
+            ayahWanita: null,
+            ibuWanita: null
+        };
 
         const checkboxes = document.querySelectorAll('.elemCheck');
-        let heroChecked = false, galeriChecked = false, bgmChecked = false, giftChecked = false;
+        let heroChecked = false, galeriChecked = false, bgmChecked = false, giftChecked = false, parentsChecked = false;
 
         checkboxes.forEach(cb => {
             if (cb.value === 'Hero image pasangan' && cb.checked) heroChecked = true;
             if (cb.value === 'Galeri foto pasangan' && cb.checked) galeriChecked = true;
             if (cb.value === 'Background music' && cb.checked) bgmChecked = true;
             if (cb.value === 'Wedding gift' && cb.checked) giftChecked = true;
+            if (cb.value === 'Nama orang tua' && cb.checked) parentsChecked = true;
         });
 
         // Hero image
@@ -526,6 +514,37 @@
             dynamicContainer.appendChild(giftDiv);
             extraGiftInput = giftDiv.querySelector('#giftAccountField');
         }
+
+        // Nama orang tua - form khusus
+        if (parentsChecked) {
+            const parentsDiv = document.createElement('div');
+            parentsDiv.className = 'sub-input-group';
+            parentsDiv.style.borderLeftColor = '#c9a87b';
+            parentsDiv.innerHTML = `
+                <label style="font-weight: 600; margin-bottom: 0.8rem; display: block;">👨‍👩‍👧‍👦 Nama Orang Tua Mempelai</label>
+                <div class="sub-input">
+                    <label>Ayah dari pihak pengantin pria</label>
+                    <input type="text" id="ayahPria" placeholder="contoh: Bapak Hendra Wijaya">
+                </div>
+                <div class="sub-input">
+                    <label>Ibu dari pihak pengantin pria</label>
+                    <input type="text" id="ibuPria" placeholder="contoh: Ibu Siti Nurjanah">
+                </div>
+                <div class="sub-input">
+                    <label>Ayah dari pihak pengantin wanita</label>
+                    <input type="text" id="ayahWanita" placeholder="contoh: Bapak Darmawan Setiawan">
+                </div>
+                <div class="sub-input">
+                    <label>Ibu dari pihak pengantin wanita</label>
+                    <input type="text" id="ibuWanita" placeholder="contoh: Ibu Dewi Lestari">
+                </div>
+            `;
+            dynamicContainer.appendChild(parentsDiv);
+            extraParents.ayahPria = parentsDiv.querySelector('#ayahPria');
+            extraParents.ibuPria = parentsDiv.querySelector('#ibuPria');
+            extraParents.ayahWanita = parentsDiv.querySelector('#ayahWanita');
+            extraParents.ibuWanita = parentsDiv.querySelector('#ibuWanita');
+        }
     }
 
     function bindCheckboxReRender() {
@@ -542,7 +561,6 @@
     }
     initDynamic();
 
-    // validasi utama
     function generateCleanPrompt() {
         const namaPria = document.getElementById('namaPria').value.trim();
         const namaWanita = document.getElementById('namaWanita').value.trim();
@@ -557,7 +575,7 @@
         const kataUcapan = document.getElementById('kataUcapan').value.trim();
 
         if (!namaPria || !namaWanita || !tglNikah || !waktuAkad || !waktuResepsi || !lokasiAkad || !lokasiResepsi || !ceritaCinta || !kataUcapan) {
-            alert("Mohon lengkapi data wajib: nama kedua mempelai, tanggal, waktu akad/resepsi, lokasi, cerita cinta, & kata ucapan.");
+            alert("Mohon lengkapi data wajib: nama mempelai, tanggal, waktu, lokasi, cerita cinta, & kata ucapan.");
             return null;
         }
 
@@ -568,19 +586,35 @@
         const galeriLinks = extraGaleriInputs.map(inp => inp.value.trim()).filter(l => l !== "");
         const bgmLink = extraBgmInput ? extraBgmInput.value.trim() : '';
         const giftRek = extraGiftInput ? extraGiftInput.value.trim() : '';
+        
+        const showParents = selectedElements.includes('Nama orang tua');
+        const parentsData = {
+            ayahPria: extraParents.ayahPria ? extraParents.ayahPria.value.trim() : '',
+            ibuPria: extraParents.ibuPria ? extraParents.ibuPria.value.trim() : '',
+            ayahWanita: extraParents.ayahWanita ? extraParents.ayahWanita.value.trim() : '',
+            ibuWanita: extraParents.ibuWanita ? extraParents.ibuWanita.value.trim() : ''
+        };
 
         const formattedDate = new Date(tglNikah).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
 
-        // ========== PROMPT PROFESIONAL DAN CLEAN ==========
         let prompt = `[WEDDING WEBSITE BRIEF - PREMIUM]\n\n`;
         prompt += `DESKRIPSI: Buatkan website undangan pernikahan digital yang modern, responsif (mobile-first), dengan animasi halus dan navigasi yang intuitif. Tampilkan informasi pernikahan secara elegan.\n\n`;
-        prompt += `▸ PENGANTIN:\n   • ${namaPria} & ${namaWanita}\n\n`;
-        prompt += `▸ TANGGAL & WAKTU:\n   • Tanggal Pernikahan: ${formattedDate}\n   • Akad Nikah: ${waktuAkad}\n   • Resepsi: ${waktuResepsi}\n\n`;
+        prompt += `▸ PENGANTIN:\n   • ${namaPria} & ${namaWanita}\n`;
+        
+        if (showParents) {
+            prompt += `\n▸ KELUARGA (Orang Tua):\n`;
+            if (parentsData.ayahPria) prompt += `   • Ayah dari Pria: ${parentsData.ayahPria}\n`;
+            if (parentsData.ibuPria) prompt += `   • Ibu dari Pria: ${parentsData.ibuPria}\n`;
+            if (parentsData.ayahWanita) prompt += `   • Ayah dari Wanita: ${parentsData.ayahWanita}\n`;
+            if (parentsData.ibuWanita) prompt += `   • Ibu dari Wanita: ${parentsData.ibuWanita}\n`;
+            prompt += `   (Tampilkan bagian "Keluarga" atau "Parental Blessing" yang menghormati orang tua)\n`;
+        }
+        
+        prompt += `\n▸ TANGGAL & WAKTU:\n   • Tanggal Pernikahan: ${formattedDate}\n   • Akad Nikah: ${waktuAkad}\n   • Resepsi: ${waktuResepsi}\n\n`;
         prompt += `▸ LOKASI:\n   • Akad: ${lokasiAkad}\n   • Resepsi: ${lokasiResepsi}\n\n`;
         prompt += `▸ VISUAL STYLE:\n   • Palet Warna Utama: ${temaWarna}\n   • Gaya Visual: ${gayaVisual}\n   • Tipografi bersih, ruang lega, aksen garis tipis atau shadow lembut.\n\n`;
         prompt += `▸ FITUR & ELEMEN YANG DIMINTA:\n${selectedElements.map(e => `   ✓ ${e}`).join('\n') || '   (default: informasi inti)'}\n`;
 
-        // data tambahan
         if (selectedElements.includes('Hero image pasangan') && heroLink) {
             prompt += `   ◈ Hero Image: gunakan gambar utama dari link → ${heroLink}\n`;
         }
@@ -595,7 +629,7 @@
             prompt += `   ◈ Informasi Wedding Gift: ${giftRek}\n`;
         }
         if (selectedElements.includes('Google Maps lokasi')) {
-            prompt += `   ◈ Sertakan Google Maps terintegrasi untuk lokasi akad & resepsi (berdasarkan alamat yang diberikan).\n`;
+            prompt += `   ◈ Sertakan Google Maps terintegrasi untuk lokasi akad & resepsi.\n`;
         }
         if (selectedElements.includes('Ucapan dari tamu')) {
             prompt += `   ◈ Section Ucapan Tamu dengan kata pembuka: "${kataUcapan}". Desain grid kartu ucapan.\n`;
@@ -606,6 +640,7 @@
         if (selectedElements.includes('Countdown timer')) {
             prompt += `   ◈ Countdown menuju tanggal ${formattedDate}.\n`;
         }
+        
         prompt += `\n▸ CERITA CINTA (untuk halaman story):\n   "${ceritaCinta}"\n\n`;
         prompt += `▸ CATATAN TEKNIS:\n`;
         prompt += `   • Semua link gambar Google Drive harus menggunakan format embed: https://lh3.googleusercontent.com/d/...\n`;

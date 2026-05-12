@@ -1,6 +1,5 @@
 # 💍 Invitation Prompt Builder – Wedding Prompt Studio
 
-![Website Preview](https://invitation-prompt-builder.vercel.app/)
 [![GitHub Repo stars](https://img.shields.io/github/stars/zaidanity/Invitation-Prompt-Builder?style=social)](https://github.com/zaidanity/Invitation-Prompt-Builder)
 
 **Generator pembuatan undangan digital** yang mengubah detail pernikahan Anda menjadi **prompt profesional** siap kirim ke developer atau AI.
@@ -45,8 +44,6 @@ Invitation-Prompt-Builder/
 
 ```
 
-> *Berdasarkan GitHub: hanya ada `index.html` dan commit "tampilan baru" (29 Apr 2026)*
-
 ## 💻 Menjalankan Lokal
 
 Karena ini adalah website statis (HTML/CSS/JS), Anda bisa langsung:
@@ -80,8 +77,6 @@ Gunakan format Google Drive untuk foto:
 https://lh3.googleusercontent.com/d/ID_FOTO123
 ```
 
-(Contoh di atas berdasarkan logika umum – output sesungguhnya tergantung implementasi JavaScript di index.html)
-
 🔧 Kontribusi
 
 Karena ini proyek open source (100% HTML), Anda bisa:
@@ -100,14 +95,8 @@ Karena ini proyek open source (100% HTML), Anda bisa:
   · AI enthusiast untuk otomatisasi prompt
   · Belajar HTML/CSS/JS interaktif
 
-👤 Kontributor
-
-· zaidanity (Jidann) – Creator & Maintainer
-
-📄 Lisensi
-
-Tidak disebutkan secara eksplisit – asumsikan MIT atau hubungi pemilik repository.
-
+---
+ zaidanity (Jidann) – Creator & Maintainer
 ---
 
 Dibuat dengan ☕ untuk membantu mewujudkan undangan pernikahan impian, dengan bantuan AI ✨
